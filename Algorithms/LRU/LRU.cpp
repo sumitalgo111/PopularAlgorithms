@@ -46,6 +46,7 @@ public:
 				if (cache.size() == capacity)
 				{
 					//cout << "Removing " << cache.back().getKey() << endl;
+					map.erase(cache.back().getKey());
 					cache.pop_back();
 				}
 
