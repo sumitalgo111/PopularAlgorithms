@@ -22,16 +22,18 @@ public:
 		if (!upTokenBucket)
 			return false;
 
+		cout << "Available Tokens: " << upTokenBucket->getNumberOfTokens() << endl;
+
 		if (upTokenBucket->allowRequest(tokens))
 		{
 			cout << "allowed\n";
-			cout << "Available Tokens: " << upTokenBucket->getNumberOfTokens() << endl;
+			cout << "After Allow, available Tokens: " << upTokenBucket->getNumberOfTokens() << endl;
 			return true;
 		}
 		else
 		{
 			cout << "Not Allowed\n";
-			cout << "Available Tokens: " << upTokenBucket->getNumberOfTokens() << endl;
+			//cout << "Available Tokens: " << upTokenBucket->getNumberOfTokens() << endl;
 			return false;
 		}
 	}
